@@ -1,15 +1,15 @@
 import express from "express";
-import Hotspot from "../models/Hotspot.js";
+import Hotspots from "../models/Hotspot.js";
 
 const router = express.Router();
 
 router.get("/", async (req, res) => {
-  const data = await Hotspot.find();
+  const data = await Hotspots.find();
   res.json(data);
 });
 
 router.post("/", async (req, res) => {
-  const newData = new Hotspot(req.body);
+  const newData = new Hotspots(req.body);
   const saved = await newData.save();
   res.json(saved);
 });
