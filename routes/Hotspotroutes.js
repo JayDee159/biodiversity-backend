@@ -1,5 +1,5 @@
 import express from "express";
-import Hotspots from "../models/Hotspot.js";
+import Hotspots from "../models/Hotspots.js";
 
 const router = express.Router();
 
