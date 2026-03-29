@@ -11,7 +11,7 @@ app.use("/api/hotspots", Hotspotroutes);
 
 dotenv.config();
 connectDB();
-
+process.env.MONGO_URI
 const app = express();
 
 app.use(cors());
