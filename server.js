@@ -3,6 +3,11 @@ import dotenv from "dotenv";
 import cors from "cors";
 import connectDB from "./config/db.js";
 import speciesRoutes from "./routes/speciesRoutes.js";
+import Analyticsroute from "./routes/Analyticsroute.js";
+import Hotspotroutes from "./routes/Hotspotroutes.js";
+
+app.use("/api/analytics", Analyticsroute);
+app.use("/api/hotspots", Hotspotroutes);
 
 dotenv.config();
 connectDB();
